@@ -103,6 +103,9 @@ ul.block li{display:block;}
   h1{color:$w-color;}
   .title-line{color:$w-color;}
 }
+.small-title{margin: 0 0 40px;
+  h1{font-size:20px;line-height:30px;color:$t-color;font-weight:700;margin:0 0 40px;}
+}
 
 .feature-wrap{@extend .pad-wrap;padding-bottom: 0;
   .feature-inner{margin: 0 auto;max-width: 1050px;}
@@ -113,9 +116,43 @@ ul.block li{display:block;}
     .feat-t{font-size:16px;line-height:26px;color:$p-color;font-weight:400;margin:0;}
   }
 }
-.topcouch-wrap{@extend .pad-wrap;@extend .gradiunt;padding-bottom: 0;
-  .top-block{margin: 0 0 80px;max-width: 400px;
+.topcoach-wrap{@extend .pad-wrap;@extend .gradiunt;
+  .top-block{margin: 0 0 40px;max-width: 400px;
     .top-title{font-size:18px;line-height:36px;color:$w-color;font-weight:700;margin:0 0 10px;}
     .top-t{font-size:16px;line-height:26px;color:$w-color;font-weight:400;margin:0;}
   }
+  .top-btn-wrap{margin: 0;}
+}
+.team-wrap{@extend .pad-wrap;@extend .white;
+  .team-inner{margin: 0 auto;max-width: 1100px;}
+  .coach-block{margin: 0 0 40px;max-width: 400px;
+
+    .coach-img{width: 80px;height: 80px;overflow: hidden;border-radius: 50%;position: relative;float: left;
+      img{width: 100%;}
+    }
+    .coach-desc{margin-left: 100px;padding-top: 10px;
+      .coach-name{font-size:18px;line-height:28px;color:$p-color;font-weight:600;margin:0 0 5px;}
+      .desig{font-size:14px;line-height:24px;color:$p-color;font-weight:400;margin:0;font-style: italic;}
+    }
+  }
+  .coach-block:after{clear: both;display: block;content: '';}
+}
+.subscribe-wrap{@extend .pad-wrap;@extend .gradiunt;text-align: center;
+  .banner-title{font-size:40px;line-height:55px;color:$w-color;font-weight:700;margin:0 0 40px;}
+  .banner-text{font-size:18px;line-height:28px;color:$w-color;font-weight:300;margin:0 0 20px;}
+  .banner-text.m0{margin: 0;}
+  .w-btn{margin: 0 0 20px;}
+}
+footer{padding: 50px;background: #1F2532;color:$w-color;
+ .container{max-width: 1000px;}
+ .about{min-height: 140px;margin: 0 0 20px;
+   p{line-height: 20px;font-size: 12px;color:$lw-color;font-weight: 400;margin: 0;}
+ }
+ .foot-title{font-size: 13px;color:$w-color;margin: 0 0 20px;font-weight: 400;}
+ ul{padding: 0;list-style: none;margin: 0 0 20px;
+   li{display: block;line-height: 28px;font-size: 12px;color:$lw-color;font-weight: 400;
+     a{color:$lw-color;text-decoration: none;font-size: 12px;font-weight: 400;}
+     a:hover{color:$w-color;}
+   }
+ }
 }
