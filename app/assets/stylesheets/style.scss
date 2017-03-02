@@ -11,7 +11,7 @@ $btn-color:#4CB8C4;
 $t-color:#22868F;
 
 @mixin translate($t-val1, $t-val2) {-webkit-transform: translate($t-val1, $t-val2);-moz-transform: translate($t-val1, $t-val2);-ms-transform: translate($t-val1, $t-val2);transform: translate($t-val1, $t-val2);}
-
+@mixin rotate($t-val3){-webkit-transform: rotate($t-val3);-moz-transform: rotate($t-val3);-ms-transform: rotate($t-val3);transform: rotate($t-val3);}
 .gradiunt1{background: rgba(91,247,208,1);
 background: -moz-linear-gradient(45deg, rgba(91,247,208,1) 0%, rgba(76,184,196,1) 100%);
 background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(91,247,208,1)), color-stop(100%, rgba(76,184,196,1)));
@@ -91,8 +91,18 @@ ul.block li{display:block;}
     }
   }
   .navbar-collapse{max-height:500px;}
-  .navbar-toggle.collapsed{background: none;padding: 0;border: none;margin-top: 25px;width: 22px;height: 22px;
+  .navbar-toggle{background: none;padding: 0;border: none;margin-top: 25px;width: 22px;height: 22px;
     .icon-bar{height: 3px;background: $w-color;}
+  }
+  .navbar-toggle.collapsed{
+    .icon-bar:nth-child(2){@include rotate(0);}
+    .icon-bar:nth-child(4){@include rotate(0);margin-top: 4px;}
+    .icon-bar:nth-child(3){display: block;}
+  }
+  .navbar-toggle{
+    .icon-bar:nth-child(2){@include rotate(45deg);}
+    .icon-bar:nth-child(4){@include rotate(-45deg);margin-top: -3px;}
+    .icon-bar:nth-child(3){display: none;}
   }
   .navbar-toggle:hover{background: none;}
   .navbar-toggle:focus{background: none;}
@@ -109,7 +119,16 @@ ul.block li{display:block;}
   }
 }
 .main-banner:after{width:100%;content:'';position:absolute;left:0;bottom:0;top:0;right:0;background: asset-url('header-cloud.png') center bottom no-repeat;z-index:0;background-size: 100%;}
-
+.main-banner2{padding:100px 0 200px;position:relative;background: asset-url('banner-bg.png') center bottom no-repeat;z-index:0;background-size: cover;
+  .banner-caption{min-height:500px;position: relative;z-index: 1;
+    .inner{text-align: center;}
+    .banner-title{font-size:34px;line-height:56px;color:$w-color;font-weight:700;margin:0 0 40px;}
+    .banner-text{font-size:14px;line-height:24px;color:$w-color;font-weight:300;margin:0 0 40px;}
+    .banner-text.m0{margin: 0;}
+    .w-btn{margin: 0 0 40px;}
+  }
+}
+.main-banner2:after{width:100%;content:'';position:absolute;left:0;bottom:0;top:0;right:0;background: asset-url('header-cloud1.png') center -10px no-repeat;z-index:0;background-size: 100%;background-position: 100% 200%;}
 .main-title{margin: 0 0 40px;
   h1{font-size:44px;line-height:66px;color:$t-color;font-weight:700;margin:0 0 40px;}
   .title-line{font-size:16px;line-height:26px;color:$p-color;font-weight:400;margin:0;}
