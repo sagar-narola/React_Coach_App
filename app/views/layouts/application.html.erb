@@ -3,8 +3,12 @@
   <head>
     <title>CouchDesign</title>
     <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_link_tag    'material-design-iconic-font.min', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -45,7 +49,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Home</a></li>
+            <li class="active"><a href="#">Home</a></li>
             <li><a href="#">Features</a></li>
             <li><a href="#">Sign In</a></li>
             <li class="s-btn"><a href="#">Sign Up</a></li>
@@ -57,12 +61,12 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-sm-3">
+          <div class="col-sm-4 col-md-3">
             <div class="about flex-box">
               <p>TOPCOACHING SOME TEXT HERE ABOUT US OUR MISSON MAYBE OR SOMETHING ELSE</p>
             </div>
           </div>
-          <div class="col-xs-6 col-sm-3">
+          <div class="col-xs-6 col-sm-2 col-md-3">
             <h2 class="foot-title">ABOUT</h2>
             <ul class="foot-link">
               <li><a href="#">Our Mission</a></li>
@@ -71,7 +75,7 @@
               <li><a href="#">Blog</a></li>
             </ul>
           </div>
-          <div class="col-xs-6 col-sm-3">
+          <div class="col-xs-6 col-sm-2 col-md-3">
             <h2 class="foot-title">SUPPORT</h2>
             <ul class="foot-link">
               <li><a href="#">FAQ</a></li>
@@ -80,12 +84,12 @@
               <li><a href="#">Privacy Policy</a></li>
             </ul>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-4 col-md-3">
             <h2 class="foot-title">CONTACT</h2>
             <ul class="contact">
-              <li>77 Yundt Dam Apt. 899</li>
-              <li>080-530-3247</li>
-              <li>schultz_felicia@hotmail.com</li>
+              <li><i class="zmdi zmdi-pin zmdi-hc-fw"></i> 77 Yundt Dam Apt. 899</li>
+              <li><i class="zmdi zmdi-phone zmdi-hc-fw"></i> 080-530-3247</li>
+              <li><i class="zmdi zmdi-email zmdi-hc-fw"></i> schultz_felicia@hotmail.com</li>
             </ul>
           </div>
         </div>
