@@ -63,7 +63,7 @@ ul.block li{display:block;}
 /* -------------------- Common css -------------------- */
 
 /* -------------------- Header css -------------------- */
-.navbar-default{margin:0;background:$clr-white;border:0;border-radius:0;position: absolute;top:0;left:0;right:0;z-index: 2;border-bottom:solid 1px $ddd;
+.navbar-default{margin:0;background:$clr-white;border:0;border-radius:0;position: fixed;top:0;left:0;right:0;z-index: 2;border-bottom:solid 1px $ddd;
   .navbar-brand{height: auto;padding: 13px 15px;
     svg{width: 190px;}
   }
@@ -88,6 +88,11 @@ ul.block li{display:block;}
       }
       a:after{content: '';width: 3px;top:0;position: absolute;left:0px;height: 100%;background: $greenL-clr;}
       a:hover, a:focus{background:rgba($greenL-clr, 0.2);}
+    }
+    .in-btn{padding: 0 20px;margin: 0 0 20px;
+      a{color:$clr-white;background: $greenL-clr;font-weight:600;font-size:16px;text-transform:none;padding:15px;line-height:20px;position: relative;display: block;border-radius: 3px;text-align: center;}
+      a:after{display: none;}
+      a:hover{background: $greenD-clr;}
     }
     .active{
       a, a:hover, a:focus{background:rgba($greenL-clr, 0.2);}
