@@ -37,11 +37,29 @@
   }
 }
 .goal-list{
-  .goal-block{background: $light-gray;padding: 15px;margin: 0 0 15px;
-    a{margin: 0;color: $greenD-clr;font-size: 12px;font-weight: 600;}
+  .goal-block{background: $light-gray;margin: 0 0 15px;display: table;width: 100%;
+    .goal{display: table-cell;width: 90%;vertical-align: middle;
+      a{padding: 10px 15px;display: block;color: $six;font-size: 12px;font-weight: 600;}
+    }
+    .goal-act{display: table-cell;width: 10%;min-width: 90px;max-width: 90px;text-align: center;vertical-align: middle;
+      a{padding: 10px;display: block;color: $greenL-clr;font-size: 12px;font-weight: 600;
+        i.zmdi{font-size: 20px;vertical-align: -4px;}
+      }
+    }
   }
   .goal-block:last-child{margin: 0;}
 }
+
+.goal-prev{text-align: center;margin: 0;
+  .goal-title{font-size: 18px;font-weight: 600;margin: 0 0 20px;}
+  p{font-size: 14px;line-height: 22px;color: $six;margin: 0;}
+}
+.goal-del{padding-top: 30px;
+  a{color: $red;font-size: 14px;font-weight: 400;
+    i.zmdi{font-size: 20px;vertical-align: -2px;}
+  }
+}
+.goal-frm{max-width: 500px;margin: 0 auto;}
 
 @media(max-width:767px){
   .profile-block{

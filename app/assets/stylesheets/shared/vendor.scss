@@ -116,6 +116,9 @@ ul.block li{display:block;}
 .dash-cont{padding: 70px 0 1px;margin-left: 250px;min-height: 100vh;
   .container-fluid{padding: 30px 30px 1px;}
 }
+/* -------------------- Container Area css -------------------- */
+
+/* -------------------- White Box css -------------------- */
 .white-box{background: $clr-white;border-radius: 5px;box-shadow: 0px 0px 10px rgba(0,0,0,0.1);overflow: hidden;margin: 0 0 30px;
   .box-title{padding: 20px 20px 10px;
     &:after{clear: both;display: block;content: '';}
@@ -130,9 +133,32 @@ ul.block li{display:block;}
     &::after{clear: both;display: block;content: '';}
   }
 }
+/* -------------------- White Box css -------------------- */
 
-/* -------------------- Container Area css -------------------- */
+/* -------------------- Form Element css -------------------- */
+.form-group{margin: 0 0 20px;position:relative;}
+.form-group.no-rm{margin: 0;}
+.form-control{padding: 12px 20px;box-shadow: none;border-radius: 5px;margin: 0;height: auto;font-weight: 400;font-size: 14px;line-height: 24px;border-radius: 1px $ddd;}
+textarea.form-control{height: 130px;resize: none;}
+form{
+  label{margin: 0 0 10px;font-weight: 400;font-size: 14px;color:#555;}
+}
+.modal .g-btn {font-size: 16px;font-weight: 600;padding: 14px 30px;text-transform: uppercase;border-radius: 5px;}
+.modal .g-btn.block-btn {width: 100%;text-align: center;}
+/* -------------------- Form Element css -------------------- */
 
+/* -------------------- Model css -------------------- */
+.modal-content{border-radius: 0;
+  .modal-header{position: relative;border: solid 1px $eee;
+    .close{opacity: 1;color: $greenD-clr;position: absolute;top:20px;right:15px;}
+    .modal-title{color: $greenD-clr;font-size: 18px;font-weight: 400;text-align: center;text-transform: uppercase;}
+  }
+  .modal-body{padding: 20px;}
+}
+.modal.center{
+  .modal-dialog{position: absolute;top:50%;left: 50%;margin:0;min-width: 600px;@include translate(-50%,-50%);-webkit-transition: none;-moz-transition: none;-o-transition: none;transition: none;}
+}
+/* -------------------- Model css -------------------- */
 
 @media(max-width:990px){
 .navbar-toggle {display: block;}
@@ -162,6 +188,9 @@ ul.block li{display:block;}
   .navbar-toggle{padding: 10px 15px;
     &:after{left:50px;}
   }
+}
+.modal.center{
+  .modal-dialog{position: static;top:inherit;left: inherit;width:calc(100% - 40px);min-width: inherit;margin: 20px;@include translate(0,0);}
 }
 }
 @media(max-width:600px){
