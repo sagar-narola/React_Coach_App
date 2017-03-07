@@ -1,0 +1,58 @@
+.profile-block{
+  .cover-block{height: 245px;position: relative;margin: 0 0 50px;
+    .cover-img{height: 245px;overflow: hidden;position: relative;}
+    .cover-action{position: absolute;top:20px;right:30px;
+      a{color: $clr-white;font-size: 14px;font-weight: 500;text-transform: uppercase;
+        i.zmdi{font-size: 20px;vertical-align: -2px;}
+      }
+    }
+    .user-block{position: absolute;bottom:-50px;left:30px;
+      &:after{clear: both;display: block;content: '';}
+      .user-avtar{float: left;width: 100px;height: 100px;overflow: hidden;border-radius: 50%;
+        img{width: 100%;}
+      }
+      .user-right{margin-left: 120px;padding: 15px 0;
+        .user-name{font-size: 18px;margin: 0 0 30px;color: $clr-white;font-weight: 500;}
+        .user-action{
+          a{color: $greenL-clr;font-size: 14px;font-weight: 500;text-transform: uppercase;
+            i.zmdi{font-size: 20px;vertical-align: -2px;}
+          }
+        }
+      }
+    }
+  }
+}
+.about-client{color: $six;
+  .about-text{margin: 0 0 20px;}
+  .about-extra{margin-bottom: 20px;
+    p{margin: 0;line-height: 24px;
+      i.zmdi{font-size: 20px;vertical-align: -4px;}
+    }
+  }
+  .social{padding: 0;margin: 0;list-style: none;
+    li{margin-left: 10px;display: inline-block;
+      a{color: $greenL-clr;font-size: 20px;display: block;}
+    }
+    li:first-child{margin-left:0;}
+  }
+}
+.goal-list{
+  .goal-block{background: $light-gray;padding: 15px;margin: 0 0 15px;
+    a{margin: 0;color: $greenD-clr;font-size: 12px;font-weight: 600;}
+  }
+  .goal-block:last-child{margin: 0;}
+}
+
+@media(max-width:767px){
+  .profile-block{
+    .cover-block{margin: 0 0 40px;
+      .cover-action{top:15px;right:15px;}
+      .user-block{left:15px;bottom: -38px;
+        .user-avtar{float: left;width: 76px;height: 76px;}
+        .user-right{margin-left: 90px;padding: 10px 0;
+          .user-name{margin: 0 0 17px;}
+        }
+      }
+    }
+  }
+}

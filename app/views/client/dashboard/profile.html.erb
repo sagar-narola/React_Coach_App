@@ -1,1 +1,123 @@
-<h1> Profile </h1>
+<div class="profile-block">
+  <div class="cover-block">
+    <div class="cover-img"><%=image_tag "cover.png", :class=>"fix-img" %></div>
+    <div class="cover-action"><a href="#"><i class="zmdi zmdi-edit zmdi-hc-fw"></i> Edit Cover</a></div>
+    <div class="user-block">
+      <div class="user-avtar">
+        <%=image_tag "avtar.png" %>
+      </div>
+      <div class="user-right">
+        <h2 class="user-name">Emilie Carlson</h2>
+        <div class="user-action">
+          <a href="#"><i class="zmdi zmdi-edit zmdi-hc-fw"></i> Edit Avatar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="white-box">
+          <div class="box-title">
+            <h2 class="title-text">About</h2>
+            <div class="box-action"><a href="#"><i class="zmdi zmdi-edit zmdi-hc-fw"></i> Edit</a></div>
+          </div>
+          <div class="box-body">
+            <div class="about-client">
+              <p class="about-text">The Emerald Buddha is a figurine of a sitting Budha, that is the is the palladium of the Kingdom of Thailand. The Buddha is made of green jade, suprisingly not of emerald, clothed in gold is approximately 45 cm tall. The Buddha is kept in the Chapel of the Emerald Buddha, which is located on the grounds of the Grand Palace in Bangkok.Legend tells that that the Emerald Buddha was created in Pataliputra, India, which is now the city of Patna in 43 BCE by Nagasena. </p>
+              <div class="row about-extra">
+                <div class="col-sm-4"><p><i class="zmdi zmdi-phone zmdi-hc-fw"></i> 377-229-4453</p></div>
+                <div class="col-sm-8"><p><i class="zmdi zmdi-email zmdi-hc-fw"></i> magdalena.abshire@hotmail.com</p></div>
+              </div>
+              <ul class="social">
+                <li><a href="#"><i class="zmdi zmdi-facebook zmdi-hc-fw"></i></a></li>
+                <li><a href="#"><i class="zmdi zmdi-twitter zmdi-hc-fw"></i></a></li>
+                <li><a href="#"><i class="zmdi zmdi-linkedin zmdi-hc-fw"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="white-box">
+          <div class="box-title">
+            <h2 class="title-text">Goals</h2>
+            <div class="box-action"><a href="#"><i class="zmdi zmdi-plus-circle zmdi-hc-fw"></i> Set a goal</a></div>
+          </div>
+          <div class="box-body">
+            <div class="goal-list">
+              <div class="goal-block">
+                <a href="#" data-toggle="modal" data-target="#myModal">loose 10kg in weight</a>
+              </div>
+              <div class="goal-block">
+                <a href="#" data-toggle="modal" data-target="#myModal">Hypnosis 12 Steps To Acquire Mind Power</a>
+              </div>
+              <div class="goal-block">
+                <a href="#" data-toggle="modal" data-target="#myModal">Helen Keller A Teller And A Seller</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+$( window ).load(function(){
+	$(".fix-img").each(function(){
+
+	var img = $(this);
+	var image_heightA = img.height();
+	var image_widthA = img.width();
+	var parent_image_widthA = img.parent().width();
+	var parent_image_heightA = img.parent().height();
+	//if(width <= height)
+
+	if(image_heightA > parent_image_heightA && image_widthA > parent_image_widthA){
+
+		img.css('width',parent_image_widthA + 'px');
+		var tem_image_heightA = img.height();
+
+		if(tem_image_heightA > parent_image_heightA){
+			img.css('width','100%');
+		}
+		else{
+			img.css('width','auto');
+			img.css('height','100%');
+		}
+	}
+	else{
+		img.css('width',parent_image_widthA + 'px');
+		var tem_image_heightA = img.height();
+
+		if(tem_image_heightA > parent_image_heightA){
+			img.css('width','100%');
+		}
+		else{
+			img.css('width','auto');
+			img.css('height','100%');
+		}
+	}
+	});
+});
+</script>

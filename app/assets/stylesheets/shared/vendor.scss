@@ -68,7 +68,7 @@ ul.block li{display:block;}
     svg{width: 190px;}
   }
   .user-drop{float: right;
-    .dropdown-toggle{padding: 10px;vertical-align: middle;display: block;color: $blue-clr;font-size: 14px;font-weight: 600;
+    .dropdown-toggle{padding: 10px 0;vertical-align: middle;display: block;color: $blue-clr;font-size: 14px;font-weight: 600;
       .user-avtar{width: 50px;height: 50px;overflow: hidden;border-radius: 50%;display: inline-block;vertical-align: middle;margin: 0 0 0 20px;
         img{width: 100%;}
       }
@@ -79,13 +79,15 @@ ul.block li{display:block;}
 
 /* -------------------- Sidebar css -------------------- */
 .sidebar{position: fixed;left: 0;width: 250px;top:70px;min-height: calc(100vh - 70px);box-shadow: 0px 0px 10px rgba(0,0,0,0.1);background: $clr-white;
+  .navbar-collapse{max-height:500px;padding: 0;}
   .navbar-nav{-webkit-transition: all 0.4s ease;transition: all 0.4s ease;padding: 15px 0;float: none;
     li{float: none;display: block;
-      a{color:$greenL-clr;font-weight:600;font-size:14px;text-transform:capitalize;padding:15px 20px 15px 40px;line-height:20px;position: relative;display: block;
+      a{color:$greenL-clr;font-weight:600;font-size:14px;text-transform:capitalize;padding:15px 20px 15px 50px;line-height:20px;position: relative;display: block;
+        i.zmdi{position: absolute;font-size: 20px;left:15px;top:15px;}
         .badge{float: right;background: $greenL-clr;color:$clr-white;font-size: 12px;width: 20px;height: 20px;border-radius: 50%;padding: 0;text-align: center;line-height: 20px;}
       }
       a:after{content: '';width: 3px;top:0;position: absolute;left:0px;height: 100%;background: $greenL-clr;}
-      a:hover{background:rgba($greenL-clr, 0.2);}
+      a:hover, a:focus{background:rgba($greenL-clr, 0.2);}
     }
     .active{
       a, a:hover, a:focus{background:rgba($greenL-clr, 0.2);}
@@ -110,9 +112,33 @@ ul.block li{display:block;}
 }
 /* -------------------- Sidebar css -------------------- */
 
+/* -------------------- Container Area css -------------------- */
+.dash-cont{padding: 70px 0 1px;margin-left: 250px;min-height: 100vh;
+  .container-fluid{padding: 30px 30px 1px;}
+}
+.white-box{background: $clr-white;border-radius: 5px;box-shadow: 0px 0px 10px rgba(0,0,0,0.1);overflow: hidden;margin: 0 0 30px;
+  .box-title{padding: 20px 20px 10px;
+    &:after{clear: both;display: block;content: '';}
+    .title-text{color: $greenL-clr;margin: 0;font-size: 16px;font-weight: 500;float: left;text-transform: uppercase;line-height: 22px;}
+    .box-action{float: right;
+      a{color: $greenL-clr;font-size: 14px;font-weight: 500;text-transform: uppercase;
+        i.zmdi{font-size: 20px;vertical-align: -2px;}
+      }
+    }
+  }
+  .box-body{padding: 10px 20px 20px;font-size: 12px;color: $clr-primary;line-height: 18px;min-height: 230px;
+    &::after{clear: both;display: block;content: '';}
+  }
+}
 
-@media(max-width:767px){
-.navbar-header{float: left;}
+/* -------------------- Container Area css -------------------- */
+
+
+@media(max-width:990px){
+.navbar-toggle {display: block;}
+.navbar-collapse.collapse{display: none !important;}
+.navbar-collapse.collapse.in{display: block !important;}
+.dash-cont{padding: 0 0 1px;margin-left:0;}
 .sidebar{position: inherit;left: 0;width: 100%;top:inherit;min-height:auto;margin-top: 70px;
   .navbar-nav{padding:0;margin: 0;
     li{float: none;display: block;
@@ -126,6 +152,28 @@ ul.block li{display:block;}
       a, a:hover, a:focus{background:rgba($greenL-clr, 0.2);}
     }
   }
-  .navbar-collapse{max-height:500px;padding: 0;}
 }
+}
+@media(max-width:767px){
+.navbar-header{float: left;}
+.dash-cont{.container-fluid{padding:15px 15px 1px;}}
+.white-box{margin: 0 0 20px;}
+.sidebar{
+  .navbar-toggle{padding: 10px 15px;
+    &:after{left:50px;}
+  }
+}
+}
+@media(max-width:600px){
+  .navbar-default{
+    .navbar-brand{height: auto;padding: 14px 10px;
+      svg{width: 110px;}
+    }
+    .user-drop{float: right;
+      .dropdown-toggle{
+        .user-avtar{width: 35px;height: 35px;margin: 0 0 0 5px;}
+      }
+    }
+  }
+  .sidebar{margin-top: 55px;}
 }
