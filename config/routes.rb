@@ -13,6 +13,11 @@ Rails.application.routes.draw do
 
   namespace :coach do
     get 'dashboard/profile'
+
+    get 'dashboard/setting'
+
+    get 'dashboard/conversation'
+
   end
 
 

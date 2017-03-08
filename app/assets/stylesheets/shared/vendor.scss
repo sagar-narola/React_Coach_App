@@ -63,7 +63,7 @@ ul.block li{display:block;}
 /* -------------------- Common css -------------------- */
 
 /* -------------------- Header css -------------------- */
-.navbar-default{margin:0;background:$clr-white;border:0;border-radius:0;position: fixed;top:0;left:0;right:0;z-index: 2;border-bottom:solid 1px $ddd;
+.navbar-default{margin:0;background:$clr-white;border:0;border-radius:0;position: fixed;top:0;left:0;right:0;z-index: 100;border-bottom:solid 1px $ddd;
   .navbar-brand{height: auto;padding: 13px 15px;
     svg{width: 190px;}
   }
@@ -78,7 +78,7 @@ ul.block li{display:block;}
 /* -------------------- Header css -------------------- */
 
 /* -------------------- Sidebar css -------------------- */
-.sidebar{position: fixed;left: 0;width: 250px;top:70px;min-height: calc(100vh - 70px);box-shadow: 0px 0px 10px rgba(0,0,0,0.1);background: $clr-white;
+.sidebar{position: fixed;left: 0;width: 250px;top:70px;min-height: calc(100vh - 70px);box-shadow: 0px 0px 10px rgba(0,0,0,0.1);background: $clr-white;z-index: 11;
   .navbar-collapse{max-height:500px;padding: 0;}
   .navbar-nav{-webkit-transition: all 0.4s ease;transition: all 0.4s ease;padding: 15px 0;float: none;
     li{float: none;display: block;
@@ -148,8 +148,8 @@ textarea.form-control{height: 130px;resize: none;}
 form{
   label{margin: 0 0 10px;font-weight: 400;font-size: 14px;color:#555;}
 }
-.modal .g-btn {font-size: 16px;font-weight: 600;padding: 14px 30px;text-transform: uppercase;border-radius: 5px;}
-.modal .g-btn.block-btn {width: 100%;text-align: center;}
+.g-btn {font-size: 16px;font-weight: 600;padding: 14px 30px;text-transform: uppercase;border-radius: 5px;}
+.g-btn.block-btn {width: 100%;text-align: center;}
 /* -------------------- Form Element css -------------------- */
 
 /* -------------------- Model css -------------------- */
@@ -165,24 +165,26 @@ form{
 }
 /* -------------------- Model css -------------------- */
 
+/* -------------------- Tab View css -------------------- */
+.nav-tabs{border:none;
+  li{margin-left:15px;
+    &:first-child{margin-left:0;}
+    a{border:none;border-bottom:solid 2px rgba($greenL-clr, 0);border-top:solid 2px rgba($greenL-clr, 0);background:none;padding:0 10px;line-height:56px;font-size:16px;font-weight:400;color:$nine;border-radius:0;margin-right: 0;}
+    a:hover{border-bottom:solid 2px rgba($greenL-clr, 1);border-top:solid 2px rgba($greenL-clr, 0);color:$greenL-clr;background: none;}
+    &.active{
+      a, a:focus, a:hover{border:none;border-bottom:solid 2px $greenL-clr;border-top:solid 2px rgba($greenL-clr, 0);color:$greenL-clr;}
+    }
+  }
+}
+/* -------------------- Tab View css -------------------- */
+
 @media(max-width:990px){
 .navbar-toggle {display: block;}
 .navbar-collapse.collapse{display: none !important;}
 .navbar-collapse.collapse.in{display: block !important;}
 .dash-cont{padding: 0 0 1px;margin-left:0;}
 .sidebar{position: inherit;left: 0;width: 100%;top:inherit;min-height:auto;margin-top: 70px;
-  .navbar-nav{padding:0;margin: 0;
-    li{float: none;display: block;
-      a{color:$greenL-clr;font-weight:600;font-size:14px;text-transform:capitalize;padding:15px 20px 15px 40px;line-height:20px;position: relative;display: block;
-        .badge{float: right;background: $greenL-clr;color:$clr-white;font-size: 12px;width: 20px;height: 20px;border-radius: 50%;padding: 0;text-align: center;line-height: 20px;}
-      }
-      a:after{content: '';width: 3px;top:0;position: absolute;left:0px;height: 100%;background: $greenL-clr;}
-      a:hover{background:rgba($greenL-clr, 0.2);}
-    }
-    .active{
-      a, a:hover, a:focus{background:rgba($greenL-clr, 0.2);}
-    }
-  }
+  .navbar-nav{padding:0;margin: 0;}
 }
 }
 @media(max-width:767px){
