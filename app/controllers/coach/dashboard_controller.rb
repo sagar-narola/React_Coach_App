@@ -9,4 +9,7 @@ class Coach::DashboardController < CoachController
   def conversation
   end
 
+  def library
+  end
+
 end

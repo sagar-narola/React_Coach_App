@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
     get 'dashboard/conversation'
 
+    get 'dashboard/library'
+
   end
 
 

@@ -35,6 +35,12 @@
     }
     li:first-child{margin-left:0;}
   }
+  .row{margin-left:-10px;margin-right:-10px;}
+  [class*='col-']{padding-left: 10px;padding-right: 10px;}
+  .form-group.icn{position: relative;
+    .form-control{padding-left: 50px;}
+    .zmdi {position: absolute;top: 15px;left: 15px;font-size: 20px;color: #999;width: 20px;text-align: center;}
+  }
 }
 
 .Skill-list{padding: 0;list-style: none;margin: 0 -5px;
