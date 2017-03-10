@@ -45,16 +45,12 @@
             <div class="box-action"><a href="#"><i class="zmdi zmdi-edit zmdi-hc-fw"></i> Edit</a></div>
           </div>
           <div class="box-body">
-            <ul class="Skill-list">
-              <li><div class="skill-tag">Skill 1</div></li>
-              <li><div class="skill-tag">Skill Name 2</div></li>
-              <li><div class="skill-tag">Some Skill Name 4</div></li>
-              <li><div class="skill-tag">Skill 4</div></li>
-              <li><div class="skill-tag">Some Skill Name 4</div></li>
-              <li><div class="skill-tag">Skill Name 2</div></li>
-              <li><div class="skill-tag">Skill 1</div></li>
-              <li><div class="skill-tag">Skill 1</div></li>
-            </ul>
+            <div class="tag-manage vis">
+              <div class="form-group">
+                <input type="text" name="tags" placeholder="Tags" class="tm-input form-control" />
+              </div>
+              <div class="skill-list"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -214,16 +210,12 @@
             <div class="box-action"><a href="#"><i class="zmdi zmdi-check zmdi-hc-fw"></i> Save</a><a href="#" class="cancel"><i class="zmdi zmdi-close zmdi-hc-fw"></i> Cancel</a></div>
           </div>
           <div class="box-body">
-            <ul class="Skill-list">
-              <li><div class="skill-tag">Skill 1</div></li>
-              <li><div class="skill-tag">Skill Name 2</div></li>
-              <li><div class="skill-tag">Some Skill Name 4</div></li>
-              <li><div class="skill-tag">Skill 4</div></li>
-              <li><div class="skill-tag">Some Skill Name 4</div></li>
-              <li><div class="skill-tag">Skill Name 2</div></li>
-              <li><div class="skill-tag">Skill 1</div></li>
-              <li><div class="skill-tag">Skill 1</div></li>
-            </ul>
+            <div class="tag-manage">
+              <div class="form-group">
+                <input type="text" name="tags" placeholder="Tags" class="tm-input form-control" />
+              </div>
+              <div class="skill-list"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -257,40 +249,49 @@
 
 <script>
 $( window ).load(function(){
-	$(".fix-img").each(function(){
+  $(".fix-img").each(function(){
 
-	var img = $(this);
-	var image_heightA = img.height();
-	var image_widthA = img.width();
-	var parent_image_widthA = img.parent().width();
-	var parent_image_heightA = img.parent().height();
-	//if(width <= height)
+  var img = $(this);
+  var image_heightA = img.height();
+  var image_widthA = img.width();
+  var parent_image_widthA = img.parent().width();
+  var parent_image_heightA = img.parent().height();
+  //if(width <= height)
 
-	if(image_heightA > parent_image_heightA && image_widthA > parent_image_widthA){
+  if(image_heightA > parent_image_heightA && image_widthA > parent_image_widthA){
 
-		img.css('width',parent_image_widthA + 'px');
-		var tem_image_heightA = img.height();
+    img.css('width',parent_image_widthA + 'px');
+    var tem_image_heightA = img.height();
 
-		if(tem_image_heightA > parent_image_heightA){
-			img.css('width','100%');
-		}
-		else{
-			img.css('width','auto');
-			img.css('height','100%');
-		}
-	}
-	else{
-		img.css('width',parent_image_widthA + 'px');
-		var tem_image_heightA = img.height();
+    if(tem_image_heightA > parent_image_heightA){
+      img.css('width','100%');
+    }
+    else{
+      img.css('width','auto');
+      img.css('height','100%');
+    }
+  }
+  else{
+    img.css('width',parent_image_widthA + 'px');
+    var tem_image_heightA = img.height();
 
-		if(tem_image_heightA > parent_image_heightA){
-			img.css('width','100%');
-		}
-		else{
-			img.css('width','auto');
-			img.css('height','100%');
-		}
-	}
-	});
+    if(tem_image_heightA > parent_image_heightA){
+      img.css('width','100%');
+    }
+    else{
+      img.css('width','auto');
+      img.css('height','100%');
+    }
+  }
+  });
 });
+</script>
+
+<%= stylesheet_link_tag    'components/tagmanager' %>
+<%= javascript_include_tag 'components/tagmanager' %>
+<script>
+jQuery(".tm-input").tagsManager();
+jQuery(".skill-list").tagsManager({
+    prefilled: ["Skill 1", "Skill Name 2", "Some Skill Name 4", "Skill 4", "Some Skill Name 2", "Skill Name 1", "Skill 2", "Skill 3"]
+  });
 </script>

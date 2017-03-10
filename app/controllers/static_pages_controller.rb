@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def register
   end
+
+  def coach
+  end
 end
