@@ -8,4 +8,4 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-Rails.application.config.assets.precompile += %w( components/owl.carousel.css material-design-iconic-font.min.css components/owl.carousel.js client.scss client.js coach.scss coach.js landing_page.scss components/tagmanager.scss components/tagmanager.js)
+Rails.application.config.assets.precompile += %w( components/owl.carousel.css components/material-design-iconic-font.min.css components/owl.carousel.js client.scss client.js coach.scss coach.js landing_page.scss components/tagmanager.scss components/tagmanager.js components/fonts.scss)

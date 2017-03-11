@@ -16,8 +16,8 @@
  // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
  @import "bootstrap-sprockets";
  @import "bootstrap";
- @import "fonts";
- @import "material-design-iconic-font";
+ @import "components/fonts";
+ @import "components/material-design-iconic-font";
  @import "shared/colors";
  @import "shared/vendor";
  @import "pages/client/profile";
