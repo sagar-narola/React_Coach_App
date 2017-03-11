@@ -7,7 +7,11 @@
     .w-btn{margin: 0 0 40px;}
   }
 }
-.main-banner2:after{width:100%;content:'';position:absolute;left:0;bottom:-100px;top:0;right:0;background: asset-url('header-cloud1.png') center bottom no-repeat;z-index:0;background-size: 100%;}
+.banner-cloud{
+  svg{width: 5000px;display: block;position: absolute;left:50%;@include translate(-50%,0);bottom: -100px;
+  }
+}
+.main-banner2:after{width:100%;content:'';position:absolute;left:0;bottom:-100px;top:0;right:0;background: asset-url('header-cloud1.png') center bottom no-repeat;z-index:0;background-size: 100%;display: none;}
 .feature-sec{@extend .pad-wrap;padding-bottom: 0;position: relative;overflow: hidden;
   .small-title{margin: 50px auto 100px;max-width: 950px;}
   .feature-box{margin: 0 auto 80px;padding: 0 80px;position: relative;z-index: 1;
@@ -37,6 +41,9 @@
   .feat-cloud1{position: absolute;top: 35%;right:0;@include translate(40%,0);
     svg{width:689px;}
   }
+}
+@media(max-width:1440px){
+  .banner-cloud{svg{width: 400%;bottom: -15%;}}
 }
 @media(max-width:1200px){
   .feature-sec{
@@ -117,4 +124,7 @@
       .feat-image{margin-right: 10;}
     }
   }
+}
+@media(max-width:500px){
+.banner-cloud{svg{bottom: -30px;}}
 }

@@ -1,7 +1,11 @@
-.bg-fix{padding:120px 0 150px;position:relative;min-height:100vh;@extend .gradiunt1;
+.bg-fix{padding:120px 0 150px;position:relative;min-height:100vh;@extend .gradiunt1;overflow: hidden;
   .container{max-width: 1050px;}
 }
-.bg-fix:after{width:100%;content:'';position:absolute;left:0;bottom:0px;top:0;right:0;background: asset-url('bot-cloud.png') center bottom no-repeat;z-index:0;background-size: 100%;}
+.bg-cloud{
+  svg{width: 5000px;display: block;position: absolute;left:50%;@include translate(-50%,0);bottom: -250px;
+  }
+}
+.bg-fix:after{width:100%;content:'';position:absolute;left:0;bottom:0px;top:0;right:0;background: asset-url('bot-cloud.png') center bottom no-repeat;z-index:0;background-size: 100%;display: none;}
 .frm-sec{min-height: calc(100vh - 270px);}
 .white-box{background: $clr-white;border-radius: 10px;padding: 30px;}
 
@@ -44,6 +48,18 @@ form{
   .log-line{font-size: 14px;font-weight: 600;text-align: center;
     a{text-decoration: underline;}
   }
+}
+@media(max-width:1440px){
+  .bg-cloud{svg{width: 400%;bottom: -25%;}}
+}
+@media(max-width:1100px){
+  .bg-cloud{svg{bottom: -20%;}}
+}
+@media(max-width:990px){
+  .bg-cloud{svg{bottom: -15%;}}
+}
+@media(max-width:600px){
+  .bg-cloud{svg{bottom: -5%;}}
 }
 @media(max-width:500px){
 .white-box{padding: 25px 15px;}
