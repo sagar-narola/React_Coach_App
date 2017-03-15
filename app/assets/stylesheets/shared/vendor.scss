@@ -159,12 +159,12 @@ ul.block li{display:block;}
 .form-group{margin: 0 0 20px;position:relative;}
 .form-group.no-rm{margin: 0;}
 .form-control{padding: 12px 20px;box-shadow: none;border-radius: 5px;margin: 0;height: auto;font-weight: 400;font-size: 14px;line-height: 24px;border-radius: 1px $ddd;}
-textarea.form-control{height: 130px;resize: none;}
+textarea.form-control{height: 100px;resize: none;}
 form{
   label{margin: 0 0 10px;font-weight: 400;font-size: 14px;color:#555;}
 }
 .upload-input{border:dashed 1px $ddd;border-radius:5px;padding:20px;text-align:center;position:relative;margin: 0 0 20px;overflow: hidden;
-  .icn-box{text-align:center;margin:0 0 20px;min-height: 200px;@extend .flex-box;
+  .icn-box{text-align:center;margin:0 0 20px;min-height: 150px;@extend .flex-box;
     svg{width:120px;display:inline-block;}
   }
   label{color:$six;font-size:18px;font-weight:400;margin:0 0 10px;
@@ -200,9 +200,9 @@ form .g-btn.block-btn {width: 100%;text-align: center;}
 .modal-open {
   .modal.center.in {display: -webkit-box !important;display: -webkit-flex !important;display: -ms-flexbox !important;display: flex !important;-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
 }
-#uploadVid,#uploadLesson{
+/*#uploadVid,#uploadLesson{
   .modal-dialog{@include translate(0,45px);}
-}
+}*/
 }
 /* -------------------- Model css -------------------- */
 
