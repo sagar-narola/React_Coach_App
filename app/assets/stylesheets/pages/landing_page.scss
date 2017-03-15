@@ -1,4 +1,4 @@
-.main-banner{padding:100px 0 200px;position:relative;@extend .gradiunt1;
+.main-banner{padding:100px 0 200px;position:relative;@extend .gradiunt1;overflow: hidden;
   .banner-caption{min-height:500px;position: relative;z-index: 1;
     .inner{text-align: center;}
     .banner-title{font-size:34px;line-height:56px;color:$clr-white;font-weight:700;margin:0 0 40px;}

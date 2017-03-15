@@ -41,13 +41,13 @@ ul.inline li{display:inline-block;}
 ul.block li{display:block;}
 
 .w-btn{font-size:14px;color:$Fbtn-clr;background:$Fbtn-bg;border:solid 1px $Fbtn-bdr;padding:10px 30px;font-family:$opensans;font-weight:400;line-height:20px;display:inline-block;border-radius: 3px;}
-.w-btn:hover{color:$Fbtn-Hclr;background:$Fbtn-Hbg;border:solid 1px $Fbtn-Hbdr;}
+.w-btn:hover, .w-btn:focus{color:$Fbtn-Hclr;background:$Fbtn-Hbg;border:solid 1px $Fbtn-Hbdr;}
 
 .wl-btn{font-size:14px;color:$Lbtn-clr;background:$Lbtn-bg;border:solid 1px $Lbtn-bdr;padding:10px 30px;font-family: $opensans;font-weight:400;line-height:20px;display:inline-block;border-radius: 3px;}
-.wl-btn:hover{color:$Lbtn-Hclr;background:$Lbtn-Hbg;border:solid 1px $Lbtn-Hbdr;}
+.wl-btn:hover, .wl-btn:focus{color:$Lbtn-Hclr;background:$Lbtn-Hbg;border:solid 1px $Lbtn-Hbdr;}
 
 .g-btn{font-size:14px;color:$Gbtn-clr;background:$Gbtn-bg;border:solid 1px $Gbtn-bdr;padding:10px 30px;font-family:$opensans;font-weight:400;line-height:20px;display:inline-block;border-radius: 3px;}
-.g-btn:hover{color:$Gbtn-Hclr;background:$Gbtn-Hbg;border:solid 1px $Gbtn-Hbdr;}
+.g-btn:hover, .g-btn:focus{color:$Gbtn-Hclr;background:$Gbtn-Hbg;border:solid 1px $Gbtn-Hbdr;}
 
 .flex-box{display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
 
