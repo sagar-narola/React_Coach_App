@@ -11,6 +11,10 @@ Rails.application.routes.draw do
 
   namespace :client do
     get 'dashboard/profile'
+
+    get 'dashboard/activity'
+
+    get 'dashboard/activity_library'
   end
 
   namespace :coach do
