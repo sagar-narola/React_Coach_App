@@ -26,6 +26,12 @@ Rails.application.routes.draw do
 
     get 'dashboard/library'
 
+    get 'dashboard/payment'
+
+    get 'dashboard/payment_success'
+
+    get 'dashboard/payment_success_card'
+
   end
 
 
