@@ -15,6 +15,10 @@ Rails.application.routes.draw do
     get 'dashboard/activity'
 
     get 'dashboard/activity_library'
+
+    get 'dashboard/payment'
+
+    get 'dashboard/conversation'
   end
 
   namespace :coach do

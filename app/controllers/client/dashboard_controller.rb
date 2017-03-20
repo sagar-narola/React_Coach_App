@@ -9,4 +9,10 @@ class Client::DashboardController < ClientController
   def activity_library
   end
 
+  def payment
+  end
+
+  def conversation
+  end
+
 end
