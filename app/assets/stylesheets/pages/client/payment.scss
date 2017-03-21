@@ -10,9 +10,9 @@
       .check{position: absolute;right: 0;bottom: 0;height: 38px;width: 38px;line-height: 38px;font-size: 38px;color: $greenL-clr;display: block;}
     }
   }
-  .pay-title{color: $greenL-clr;font-size: 18px;line-height: 24px;margin: 0 0 20px;}
+  .pay-title{color: $greenL-clr;font-size: 18px;line-height: 24px;margin: 0 0 20px;text-transform: uppercase;}
   .pay-text{font-size: 14px;line-height: 20px;color: $nine;margin: 0 0 30px;}
-  .g-btn{min-width: 200px;}
+  .g-btn{min-width: 200px;text-transform: uppercase;}
   .input-group{max-width: 300px;margin: 0 auto;position: relative;
     .master-icn{position: absolute;top:12px;left: 12px;z-index: 4;}
     .form-control{border: none;padding: 7px 15px 7px 50px;background: $light-gray;outline: none;
