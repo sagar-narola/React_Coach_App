@@ -304,6 +304,20 @@
         </div>
       </div>
     </div>
+    <div class="lib-sec">
+      <h3 class="lib-title">Question</h3>
+      <div class="lib-row">
+        <div class="lib-col">
+          <div class="lib-block">
+            <div class="lib-disp">
+              <div class="lib-add">
+                <a href="#" data-toggle="modal" data-target="#uploadQua"><span class="icn"><i class="zmdi zmdi-plus-circle-o zmdi-hc-fw"></i><span>Add Questionnaire</span></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -442,6 +456,73 @@
   </div>
 </div>
 
+<div class="modal fade" id="uploadQua" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="zmdi zmdi-close zmdi-hc-fw"></i></button>
+        <h4 class="modal-title" id="myModalLabel">New  Questionnaire</h4>
+      </div>
+      <div class="modal-body">
+        <form class="qua-frm">
+          <div class="nest-clone demo-wrap">
+            <div class="toclone qua-box">
+              <div class="form-group">
+                <label for="qua" class="control-label">Question 1</label>
+                <input type="text" class="form-control" id="qua">
+              </div>
+
+              <div class="ans-block">
+                <div class="option row">
+                  <div class="col-sm-4"><label for="opt1"><input type="radio" id="opt1" name="answerOpt" value="1" checked><span></span> Free text</label> </div>
+                  <div class="col-sm-4"><label for="opt2"><input type="radio" id="opt2" name="answerOpt" value="2"><span></span> Many of many</label> </div>
+                  <div class="col-sm-4"><label for="opt3"><input type="radio" id="opt3" name="answerOpt" value="3"><span></span> One of many</label> </div>
+                </div>
+                <div id="ansOpt1" class="desc">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="answer1" placeholder="Answere 1">
+                  </div>
+                </div>
+                <div id="ansOpt2" class="desc" style="display: none;">
+                  <div class="nest-clone inner-wrap">
+                      <div class="toclone">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="answer2" placeholder="Answere 1">
+                        </div>
+                        <a href="#" class="clone nest-act"><i class="zmdi zmdi-plus zmdi-hc-fw"></i></a>
+                        <a href="#" class="delete nest-act"><i class="zmdi zmdi-close zmdi-hc-fw"></i></a>
+                      </div>
+                  </div>
+                </div>
+                <div id="ansOpt3" class="desc" style="display: none;">
+                  <div class="nest-clone inner-wrap">
+                      <div class="toclone">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="answer3" placeholder="Answere 1">
+                        </div>
+                        <a href="#" class="clone nest-act"><i class="zmdi zmdi-plus zmdi-hc-fw"></i></a>
+                        <a href="#" class="delete nest-act"><i class="zmdi zmdi-close zmdi-hc-fw"></i></a>
+                      </div>
+                  </div>
+                </div>
+                <div class="ans-btn">
+                  <button type="submit" class="g-btn">Save</button>
+                </div>
+              </div>
+              <a href="#" class="clone main-act"><i class="zmdi zmdi-plus zmdi-hc-fw"></i></a>
+              <a href="#" class="delete main-act"><i class="zmdi zmdi-close zmdi-hc-fw"></i></a>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer half-btn">
+        <button type="button" class="gl-btn" data-dismiss="modal">Cancel</button>
+        <button type="button" class="g-btn">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
 $( document ).ready(function(){
@@ -481,4 +562,16 @@ $( document ).ready(function(){
 	}
 	});
 });
+</script>
+<script src="http://yapapaya.github.io/jquery-cloneya/javascripts/jquery-cloneya.min.js"></script>
+<script>
+    $('.nest-clone').cloneya();
+    $(document).ready(function() {
+        $("input[name$='answerOpt']").click(function() {
+            var test = $(this).val();
+
+            $("div.desc").hide();
+            $("#ansOpt" + test).show();
+        });
+    });
 </script>
