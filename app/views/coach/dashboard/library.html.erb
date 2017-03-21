@@ -563,7 +563,8 @@ $( document ).ready(function(){
 	});
 });
 </script>
-<script src="http://yapapaya.github.io/jquery-cloneya/javascripts/jquery-cloneya.min.js"></script>
+<!--<script src="http://yapapaya.github.io/jquery-cloneya/javascripts/jquery-cloneya.min.js"></script>-->
+<%= javascript_include_tag 'components/jquery-cloneya.min' %>
 <script>
     $('.nest-clone').cloneya();
     $(document).ready(function() {
