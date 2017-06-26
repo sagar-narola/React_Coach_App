@@ -1,0 +1,130 @@
+.main-banner2{padding:100px 0 200px;position:relative;background: asset-url('banner-bg.png') center bottom no-repeat;z-index:0;background-size: cover;overflow: hidden;
+  .banner-caption{min-height:500px;position: relative;z-index: 1;
+    .inner{text-align: center;}
+    .banner-title{font-size:34px;line-height:56px;color:$clr-white;font-weight:700;margin:0 auto 40px;}
+    .banner-text{font-size:14px;line-height:24px;color:$clr-white;font-weight:300;margin:0 auto 40px;max-width: 860px;}
+    .banner-text.m0{margin-bottom: 0;}
+    .w-btn{margin: 0 0 40px;}
+  }
+}
+.banner-cloud{
+  svg{width: 5000px;display: block;position: absolute;left:50%;@include translate(-50%,0);bottom: -100px;
+  }
+}
+.main-banner2:after{width:100%;content:'';position:absolute;left:0;bottom:-100px;top:0;right:0;background: asset-url('header-cloud1.png') center bottom no-repeat;z-index:0;background-size: 100%;display: none;}
+.feature-sec{@extend .pad-wrap;padding-bottom: 0;position: relative;overflow: hidden;
+  .small-title{margin: 50px auto 100px;max-width: 950px;}
+  .feature-box{margin: 0 auto 80px;padding: 0 80px;position: relative;z-index: 1;
+    .feature-desc{width: 47%;@extend .flex-box;min-height: 645px;
+      .feature-block{margin: 0;width:100%;
+        .feat-icn{height: 100px;width: 100px;margin: 0 0 10px;}
+        .feat-title{font-size:18px;line-height:36px;color:$greenD-clr;font-weight:700;margin:0 0 10px;max-width: 450px;}
+        .feat-t{font-size:16px;line-height:26px;color:$clr-primary;font-weight:400;margin:0;max-width: 450px;}
+      }
+    }
+    .feat-image{position: absolute;height: 100%;
+      img{height: 100%;}
+    }
+  }
+  .feature-box:after{clear: both;display: block;content: '';}
+  .feature-box.left{
+    .feature-desc{float: left;}
+    .feat-image{left: 50%;text-align: left;}
+  }
+  .feature-box.right{
+    .feature-desc{float: right;}
+    .feat-image{right: 50%;text-align: right;}
+  }
+  .feat-cloud{position: absolute;top: 15%;left:0;@include translate(-40%,0);
+    svg{width:619px;}
+  }
+  .feat-cloud1{position: absolute;top: 35%;right:0;@include translate(40%,0);
+    svg{width:689px;}
+  }
+}
+@media(max-width:1440px){
+  .banner-cloud{svg{width: 400%;bottom: -15%;}}
+}
+@media(max-width:1200px){
+  .feature-sec{
+    .feature-box{
+      .feature-desc{width: 47%;min-height: 500px;}
+    }
+  }
+}
+@media(max-width:990px){
+  .main-banner2{
+    .banner-caption{min-height:400px;padding: 0 20px;
+      .banner-title{max-width: 650px;}
+      .banner-text{max-width: 650px;}
+    }
+  }
+  .main-banner2:after{bottom: 0;}
+  .feature-sec{
+    .small-title{max-width: 650px;}
+    .feature-box{padding: 0 40px;
+      .feature-desc{min-height: 450px;}
+    }
+    .feat-cloud1{display: none;}
+  }
+}
+@media(max-width:800px){
+  .feature-sec{
+    .small-title{max-width: 650px;padding:0 20px;}
+    .feature-box{margin: 0 auto 80px;padding:0;
+      .feature-desc{width: 100%;min-height: inherit;
+        .feature-block{
+          .feat-icn{}
+          .feat-title{max-width: inherit;}
+          .feat-t{max-width: inherit;}
+        }
+      }
+      .feat-image{position: relative;height: 670px;padding-bottom: 30px;
+        img{position: absolute;height: calc(100% - 30px);}
+      }
+    }
+    .feature-box.left{
+      .feature-desc{float: none;padding: 0 80px;}
+      .feat-image{left: inherit;margin-left: 50px;
+        img{left: 0;}
+      }
+    }
+    .feature-box.right{
+      .feature-desc{float: none;padding: 0 80px;}
+      .feat-image{right: inherit;margin-right: 50px;
+        img{right: 0;}
+      }
+    }
+  }
+}
+
+@media(max-width:767px){
+  .main-banner2{padding: 120px 0;overflow: visible;
+    .banner-caption{min-height:300px;padding:0;
+      .banner-title{font-size:24px;line-height:36px;margin:0 0 20px;}
+    }
+  }
+  .main-banner2:after{bottom: -2px;}
+  .feature-sec{
+    .small-title{margin: 0 auto 50px;}
+    .feature-box{margin: 0 auto 50px;}
+  }
+}
+@media(max-width:600px){
+  .feature-sec{
+    .feature-box{
+      .feat-image{height: 400px;}
+    }
+    .feature-box.left{
+      .feature-desc{padding: 0 35px;}
+      .feat-image{margin-left: 10px;}
+    }
+    .feature-box.right{
+      .feature-desc{padding: 0 35px;}
+      .feat-image{margin-right: 10;}
+    }
+  }
+}
+@media(max-width:500px){
+.banner-cloud{svg{bottom: -30px;}}
+}

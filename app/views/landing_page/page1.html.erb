@@ -1,0 +1,6 @@
+
+<% if current_user == nil %>
+  <%= react_component('LandingPage') %>
+<% else  %>
+  <%= react_component('Home') %>
+<% end %>

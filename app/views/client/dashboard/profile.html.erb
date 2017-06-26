@@ -1,0 +1,166 @@
+<div class="profile-block">
+  <div class="cover-block">
+    <div class="cover-img"><%=image_tag "cover.png", :class=>"fix-img" %></div>
+    <div class="cover-action"><a href="#"><i class="zmdi zmdi-edit zmdi-hc-fw"></i> Edit Cover</a></div>
+    <div class="user-block">
+      <div class="user-avtar">
+        <%=image_tag "avtar.png" %>
+      </div>
+      <div class="user-right">
+        <h2 class="user-name">Emilie Carlson</h2>
+        <div class="user-action">
+          <a href="#"><i class="zmdi zmdi-edit zmdi-hc-fw"></i> Edit Avatar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="white-box">
+          <div class="box-title">
+            <h2 class="title-text">About</h2>
+            <div class="box-action"><a href="#"><i class="zmdi zmdi-edit zmdi-hc-fw"></i> Edit</a></div>
+          </div>
+          <div class="box-body">
+            <div class="about-client">
+              <p class="about-text">The Emerald Buddha is a figurine of a sitting Budha, that is the is the palladium of the Kingdom of Thailand. The Buddha is made of green jade, suprisingly not of emerald, clothed in gold is approximately 45 cm tall. The Buddha is kept in the Chapel of the Emerald Buddha, which is located on the grounds of the Grand Palace in Bangkok.Legend tells that that the Emerald Buddha was created in Pataliputra, India, which is now the city of Patna in 43 BCE by Nagasena. </p>
+              <div class="row about-extra">
+                <div class="col-sm-4"><p><i class="zmdi zmdi-phone zmdi-hc-fw"></i> 377-229-4453</p></div>
+                <div class="col-sm-8"><p><i class="zmdi zmdi-email zmdi-hc-fw"></i> magdalena.abshire@hotmail.com</p></div>
+              </div>
+              <ul class="social">
+                <li><a href="#"><i class="zmdi zmdi-facebook zmdi-hc-fw"></i></a></li>
+                <li><a href="#"><i class="zmdi zmdi-twitter zmdi-hc-fw"></i></a></li>
+                <li><a href="#"><i class="zmdi zmdi-linkedin zmdi-hc-fw"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="white-box">
+          <div class="box-title">
+            <h2 class="title-text">Goals</h2>
+            <div class="box-action"><a href="#" data-toggle="modal" data-target="#setGoal"><i class="zmdi zmdi-plus-circle zmdi-hc-fw"></i> Set a goal</a></div>
+          </div>
+          <div class="box-body">
+            <div class="goal-list">
+              <div class="goal-block">
+                <div class="goal"><a href="#" data-toggle="modal" data-target="#viewGoal">loose 10kg in weight</a></div>
+                <div class="goal-act"><a href="#" data-toggle="modal" data-target="#editGoal"><i class="zmdi zmdi-edit zmdi-hc-fw"></i> Edit</a></div>
+              </div>
+              <div class="goal-block">
+                <div class="goal"><a href="#" data-toggle="modal" data-target="#viewGoal">Hypnosis 12 Steps To Acquire Mind Power</a></div>
+                <div class="goal-act"><a href="#" data-toggle="modal" data-target="#editGoal"><i class="zmdi zmdi-edit zmdi-hc-fw"></i> Edit</a></div>
+              </div>
+              <div class="goal-block">
+                <div class="goal"><a href="#" data-toggle="modal" data-target="#viewGoal">Helen Keller A Teller And A Seller</a></div>
+                <div class="goal-act"><a href="#" data-toggle="modal" data-target="#editGoal"><i class="zmdi zmdi-edit zmdi-hc-fw"></i> Edit</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade center" id="setGoal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="zmdi zmdi-close zmdi-hc-fw"></i></button>
+        <h4 class="modal-title" id="myModalLabel">Set Goal</h4>
+      </div>
+      <div class="modal-body">
+        <form class="goal-frm">
+          <div class="form-group">
+            <label for="goalTitle" class="control-label">Title</label>
+            <input type="text" class="form-control" id="goalTitle">
+          </div>
+          <div class="form-group">
+            <label for="goalDesc" class="control-label">Description</label>
+            <textarea class="form-control" id="goalDesc"></textarea>
+          </div>
+          <button type="submit" class="g-btn block-btn">Set a Goal</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade center" id="editGoal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="zmdi zmdi-close zmdi-hc-fw"></i></button>
+        <h4 class="modal-title" id="myModalLabel">Goal</h4>
+      </div>
+      <div class="modal-body">
+        <div class="goal-prev">
+          <h3 class="goal-title">loose 10kg in weight</h3>
+          <p>The Emerald Buddha is a figurine of a sitting Budha, that is the is the palladium of the Kingdom of Thailand. The Buddha is made of green jade, suprisingly not of emerald, clothed in gold is approximately 45 cm tall. The Buddha is kept in the Chapel of the Emerald Buddha, which is located on the grounds of the Grand Palace in Bangkok.Legend tells that that the Emerald Buddha was created in Pataliputra, India, which is now the city of Patna in 43 BCE by Nagasena. </p>
+        </div>
+        <div class="goal-del"><a href="#"><i class="zmdi zmdi-close zmdi-hc-fw"></i> Delete</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade center" id="viewGoal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="zmdi zmdi-close zmdi-hc-fw"></i></button>
+        <h4 class="modal-title" id="myModalLabel">Goal</h4>
+      </div>
+      <div class="modal-body">
+        <div class="goal-prev">
+          <h3 class="goal-title">loose 10kg in weight</h3>
+          <p>The Emerald Buddha is a figurine of a sitting Budha, that is the is the palladium of the Kingdom of Thailand. The Buddha is made of green jade, suprisingly not of emerald, clothed in gold is approximately 45 cm tall. The Buddha is kept in the Chapel of the Emerald Buddha, which is located on the grounds of the Grand Palace in Bangkok.Legend tells that that the Emerald Buddha was created in Pataliputra, India, which is now the city of Patna in 43 BCE by Nagasena. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+$( window ).load(function(){
+	$(".fix-img").each(function(){
+
+	var img = $(this);
+	var image_heightA = img.height();
+	var image_widthA = img.width();
+	var parent_image_widthA = img.parent().width();
+	var parent_image_heightA = img.parent().height();
+	//if(width <= height)
+
+	if(image_heightA > parent_image_heightA && image_widthA > parent_image_widthA){
+
+		img.css('width',parent_image_widthA + 'px');
+		var tem_image_heightA = img.height();
+
+		if(tem_image_heightA > parent_image_heightA){
+			img.css('width','100%');
+		}
+		else{
+			img.css('width','auto');
+			img.css('height','100%');
+		}
+	}
+	else{
+		img.css('width',parent_image_widthA + 'px');
+		var tem_image_heightA = img.height();
+
+		if(tem_image_heightA > parent_image_heightA){
+			img.css('width','100%');
+		}
+		else{
+			img.css('width','auto');
+			img.css('height','100%');
+		}
+	}
+	});
+});
+</script>

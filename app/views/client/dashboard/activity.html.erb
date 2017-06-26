@@ -1,0 +1,157 @@
+<div class="library-wrap">
+  <div class="container-fluid">
+    <div class="right-link"><a href="activity_library">Activity Library</a></div>
+    <div class="lib-sec">
+      <h3 class="lib-title">New Activities</h3>
+      <div class="lib-row">
+        <div class="lib-col">
+          <div class="lib-block">
+            <div class="lib-disp">
+              <div class="lib-img"><%=image_tag "video-img.png", :class=>"fix-img" %></div>
+              <div class="lib-overlay">
+                <span class="finish">Complete</span>
+                <div class="vid-icn"><a href="#"><i class="zmdi zmdi-play-circle zmdi-hc-fw"></i></a></div>
+                <div class="libe-name"><h3>Coach video 1</h3></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lib-col">
+          <div class="lib-block">
+            <div class="lib-disp">
+              <div class="lib-text">
+                <div class="inner-text">
+                  <h3>Coach Quiz 1</h3>
+                  <p>Some Question that Couch writ for this QUIZ ?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lib-col">
+          <div class="lib-block">
+            <div class="lib-disp">
+              <div class="lib-img"><%=image_tag "video-img.png", :class=>"fix-img" %></div>
+              <div class="lib-overlay">
+                <div class="libe-name"><h3>Coach lesson 1</h3></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lib-col">
+          <div class="lib-block">
+            <div class="lib-disp">
+              <div class="lib-text">
+                <div class="inner-text">
+                  <h3>Coach Quiz 1</h3>
+                  <p>Some Question that Couch writ for this QUIZ ?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lib-sec">
+      <h3 class="lib-title">Completed Activities</h3>
+      <div class="lib-row">
+        <div class="lib-col">
+          <div class="lib-block">
+            <div class="lib-disp">
+              <div class="lib-img"><%=image_tag "video-img.png", :class=>"fix-img" %></div>
+              <div class="lib-overlay">
+                <div class="vid-icn"><a href="#"><i class="zmdi zmdi-play-circle zmdi-hc-fw"></i></a></div>
+                <div class="libe-name"><h3>Coach video 1</h3></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lib-col">
+          <div class="lib-block">
+            <div class="lib-disp">
+              <div class="lib-text">
+                <div class="inner-text">
+                  <h3>Coach Quiz 1</h3>
+                  <p>Some Question that Couch writ for this QUIZ ?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lib-col">
+          <div class="lib-block">
+            <div class="lib-disp">
+              <div class="lib-text">
+                <div class="inner-text">
+                  <h3>Coach Quiz 1</h3>
+                  <p>Some Question that Couch writ for this QUIZ ?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lib-col">
+          <div class="lib-block">
+            <div class="lib-disp">
+              <div class="lib-img"><%=image_tag "video-img.png", :class=>"fix-img" %></div>
+              <div class="lib-overlay">
+                <div class="libe-name"><h3>Coach lesson 1</h3></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lib-col">
+          <div class="lib-block">
+            <div class="lib-disp">
+              <div class="lib-img"><%=image_tag "video-img.png", :class=>"fix-img" %></div>
+              <div class="lib-overlay">
+                <div class="libe-name"><h3>Coach lesson 1</h3></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+$( document ).ready(function(){
+	$(".fix-img").each(function(){
+
+	var img = $(this);
+	var image_heightA = img.height();
+	var image_widthA = img.width();
+	var parent_image_widthA = img.parent().width();
+	var parent_image_heightA = img.parent().height();
+	//if(width <= height)
+
+	if(image_heightA > parent_image_heightA && image_widthA > parent_image_widthA){
+
+		img.css('width',parent_image_widthA + 'px');
+		var tem_image_heightA = img.height();
+
+		if(tem_image_heightA > parent_image_heightA){
+			img.css('width','100%');
+		}
+		else{
+			img.css('width','auto');
+			img.css('height','100%');
+		}
+	}
+	else{
+		img.css('width',parent_image_widthA + 'px');
+		var tem_image_heightA = img.height();
+
+		if(tem_image_heightA > parent_image_heightA){
+			img.css('width','100%');
+		}
+		else{
+			img.css('width','auto');
+			img.css('height','100%');
+		}
+	}
+	});
+});
+</script>

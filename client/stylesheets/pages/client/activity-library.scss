@@ -1,0 +1,25 @@
+.lib-act{max-width: 990px;margin: 0 auto;}
+.white-box{
+  .box-title.lib-center{text-align: center;
+    .title-text{color: $greenD-clr;float: none;text-transform: capitalize;}
+  }
+  .lib-sec{margin: 0;
+    .lib-row{
+      .lib-col{width: 50%;}
+    }
+    .lib-block{margin: 0 auto 30px;
+      .lib-disp{
+        .lib-text{border:solid 1px $ddd;}
+      }
+    }
+  }
+}
+@media(max-width:450px){
+  .white-box{
+    .lib-sec{
+      .lib-row{
+        .lib-col{width: 100%;}
+      }
+    }
+  }
+}
