@@ -85,7 +85,7 @@ class LoginPage extends React.Component {
             errors: {}
           });
 
-          window.location="http://localhost:3000/static_pages/home";
+          window.location="https://react-coach-app.herokuapp.com/static_pages/home";
 
           },
         error: (xhr) => {

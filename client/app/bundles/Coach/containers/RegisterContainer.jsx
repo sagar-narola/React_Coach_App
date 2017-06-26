@@ -123,7 +123,8 @@ export default class RegisterContainer extends React.Component {
             },
             errors: {}
           });
-          window.location="http://localhost:3000/coach/dashboard/profile";
+//          window.location="http://localhost:3000/coach/dashboard/profile";
+          window.location="https://react-coach-app.herokuapp.com/coach/dashboard/profile";
         },
         error: (data) => {
           this.setState({errors: data.responseJSON.errors})
