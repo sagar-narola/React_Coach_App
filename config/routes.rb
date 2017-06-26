@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  devise_for :users, controllers: {sessions: 'users/sessions', registrations: 'users/registrations', passwords: 'users/passwords'}
+        devise_scope :user do
+          get '/users/sign_out' => 'devise/sessions#destroy'
+        end
+
+  get 'hello_world', to: 'hello_world#index'
   get 'static_pages/coach'
 
   get 'static_pages/login'
@@ -8,6 +15,9 @@ Rails.application.routes.draw do
   root 'landing_page#page1'
 
   get 'landing_page/page2'
+
+  get 'static_pages/home'
+
 
   namespace :client do
     get 'dashboard/profile'

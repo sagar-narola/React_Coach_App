@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  before_action :authenticate_user!
   def login
   end
 
@@ -6,5 +7,9 @@ class StaticPagesController < ApplicationController
   end
 
   def coach
+  end
+
+  def home
+
   end
 end
