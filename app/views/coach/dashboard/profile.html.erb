@@ -267,9 +267,10 @@ $( window ).ready(function(){
 
 <%= stylesheet_link_tag    'components/tagmanager' %>
 <%= javascript_include_tag 'components/tagmanager' %>
+
 <script>
-jQuery(".tm-input").tagsManager();
-jQuery(".skill-list").tagsManager({
+  jQuery(".tm-input").tagsManager();
+  jQuery(".skill-list").tagsManager({
     prefilled: ["Skill 1", "Skill Name 2", "Some Skill Name 4", "Skill 4", "Some Skill Name 2", "Skill Name 1", "Skill 2", "Skill 3"]
   });
 </script>

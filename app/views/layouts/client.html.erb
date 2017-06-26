@@ -11,7 +11,13 @@
     <%= javascript_include_tag 'client', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class='<%= params[:controller] == "client/dashboard" && params[:action] == "conversation" ? "should-pay" : "" %>'>
+    <% if params[:controller] == "client/dashboard" && params[:action] == "conversation" %>
+    <div class="alert alert-info alert-dismissible text-center" role="alert" >
+      <!--<button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="zmdi zmdi-close zmdi-hc-fw"></i></button>-->
+      You should pay for this service. <a href="#">Pay now</a>
+    </div>
+    <% end %>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -58,7 +64,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="#"><i class="zmdi zmdi-comments zmdi-hc-fw"></i>Conversation <span class="badge">1</span></a></li>
+            <li><a href="/client/dashboard/conversation"><i class="zmdi zmdi-comments zmdi-hc-fw"></i>Conversation <span class="badge">1</span></a></li>
             <li><a href="/client/dashboard/profile"><i class="zmdi zmdi-account zmdi-hc-fw"></i>My Profile</a></li>
             <li><a href="#"><i class="zmdi zmdi-collection-text zmdi-hc-fw"></i>Library</a></li>
           </ul>
