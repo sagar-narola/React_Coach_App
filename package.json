@@ -28,7 +28,8 @@
     "react-router-active-component": "^4.0.0",
     "react-router-redux": "^5.0.0-alpha.6",
     "react-svg-use": "^2.1.0",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "style-loader": "^0.16.1"
   },
   "devDependencies": {
     "css-loader": "^0.28.0",
